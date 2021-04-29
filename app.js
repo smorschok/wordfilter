@@ -1,9 +1,8 @@
 const express = require("express");
-
 const app = express();
 const http = require("http").createServer(app);
 const port = process.env.PORT || 8080;
-
+const path = require("path");
 app.use(express.json({ extended: true }));
 
 app.use("/api/data", require("./routes/data.routes"));
